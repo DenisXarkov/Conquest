@@ -1,0 +1,427 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    &:before, &:after{
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+:focus,:active{
+    color: inherit;
+    outline: none;
+}
+a:focus,a:active,a:visited{
+    color: inherit;
+    outline:none;
+    text-decoration: none;
+}
+nav,footer,header,aside{
+    display: block;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{
+    font-family: inherit;
+}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a,a:visited{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+img:hover{
+    color: none;
+}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/*--------------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Prata&family=Roboto:wght@300;400;500;700&display=swap');
+// font-family: 'Playfair Display', serif;
+// font-family: 'Prata', serif;
+// font-family: 'Roboto', sans-serif;
+body{
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 10px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-top: 35px;
+    
+    ul{
+        display: flex;
+        li{
+            padding-right: 65px;
+            font-family: 'Roboto';
+            color: #555248;
+        }
+    }
+    .icon__header{
+        display: flex;
+        .favourites{
+            display: flex;
+            position: relative;
+            p{
+                font-family: 'Roboto';
+                position: absolute;
+                top: -5px;
+                right: 17px;
+                padding: 2px 4px 2px 4px;
+                font-size: 8px;
+                line-height: 9px;
+                background-color: #E6C8B4;
+                border-radius: 50px;
+                text-align: center;
+                color: #1B1A17;
+            }
+        }
+        .icon{
+            padding-right: 23px;
+        }
+    }
+}
+.header__main{
+    max-width: 1180px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    .header__img{
+        position: relative;
+        margin: 0px 0px 0px 125px;
+        .price{
+            position:absolute;
+            top: 140px;
+            left: -60px;
+            display: flex;
+            align-items: center;
+            font-family: 'Prata';
+            font-size: 16px;
+            line-height: 22px;
+            color: #1B1A17;
+            img{
+                position: relative;
+                padding:0px 15px 4px 8px ;
+            }
+            .price__tire{
+                width: 50px;
+                border: 1px solid #8B8371;
+            }
+        }
+
+        .bg__watch{
+            width: 496px;
+            height: 944px;
+            border-radius: 100% 0 0 100%  / 50% 0 0 50%;
+            background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%);
+            z-index: -2;
+            position:absolute;
+            top: -60px;
+            right: 200px;
+        }
+        .diametr{
+            position: absolute;
+            bottom: 140px;
+            right: -65px;
+            display: flex;
+            align-items: center;
+            font-family: 'Prata';
+            font-size: 16px;
+            line-height: 22px;
+            color: #1B1A17;
+            .diametr__tire{
+                width: 50px;
+                border: 1px solid #8B8371;
+                margin: 0px 15px 0px 0px;
+            }
+        }
+    }
+}
+.header__text{
+    display: flex;
+    margin:  0px 0px 0px 0px;
+    // align-items: center;
+    .header__tire{
+        width: 50px;
+        height: 0px;
+        border: 1px solid #8B8371;
+        margin: 35px 15px 0px 0px;
+    }
+    h2{
+        font-family: 'Playfair Display';
+        font-size: 45px;
+        line-height: 60px;
+        color: #1B1A17;
+        padding-bottom: 16px;
+    }
+    h3{
+        font-family: 'Playfair Display';
+        font-size: 30px;
+        line-height: 40px;
+        color: #1B1A17;
+        padding-bottom: 39px;
+    }
+    p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(27, 26, 23, 0.82);
+        padding-bottom: 64px;
+
+    }
+    button{
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: #444240;
+        color: #FFFFFF;
+        padding: 26px 38px 27px 38px;
+    }
+}
+.popular{
+    position: relative;
+    max-width: 1180px;
+    margin: 0 auto;
+    z-index: 36;
+    background-color: white;
+    text-align: center;
+    h2{
+        font-family: 'Playfair Display';
+        font-size: 32px;
+        line-height: 43px;
+        padding-top: 79px;
+        color: #1B1A17;
+    }
+    .button__all{
+        position: absolute;
+        top: 120px;
+        right: 50px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 16px;
+        color: #444240;
+        background-color: white;
+        border-bottom: solid 1px #C4C0B6;
+        padding-bottom: 11px;
+    }
+}
+.popular__cards{
+    padding-top: 52px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 86px;
+    .card{
+        text-align: start;
+        background: #FDFDFB;
+        margin: 0px 34px 0px 0px;
+    padding: 0 29px 19px 29px;
+
+    }
+    h3{
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: rgba(27, 26, 23, 0.82);
+        padding: 40px 0  0 40px ;
+    }
+    p{
+        font-family: 'Prata';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(27, 26, 23, 0.82);
+        padding: 10px 0 0 40px;
+        img{
+            padding-top: 2px;
+        }
+    }
+}
+.watches{
+    // filter: drop-shadow(2px 2px 10px rgba(85, 82, 72, 0.23));
+    // border: 1px solid #EAE3D4;
+    // border-radius: 50%;
+    // clip-path: circle(50%)
+    border-radius: 100% 100% 100% 100%;
+    border-top: 1px solid #EAE3D4 ;
+    border-right: 1px solid #EAE3D4 ;
+    border-bottom: 1px solid #EAE3D4 ;
+}
+.card__button{
+    display: flex;
+    align-items: center;
+    padding-top: 19px;
+    .card__tire{
+        width: 30px;
+        border: 1px solid #8B8371;
+        margin-right: 18px;
+    }
+    button{
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #1B1A17;
+        background: none;
+    }
+}
+.catalog{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDFDFB;
+    .fon{
+        width: 468px;
+        height: 100%;
+        background: #F7F5EF;
+        position: absolute;
+        z-index: 0;
+        top: 0px;
+        left: 0px;
+    }
+}
+.catalog__image{
+    position: relative;
+    padding: 52px 0px 53px 177px;
+    text-align: end;
+    .slaider{
+        margin:  20px 60px 0px 0px;
+    }
+}
+.catalog__text{
+    margin: 0px 0px 0px 70px;
+    h2{
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 43px;
+        color: #1B1A17;
+        padding-bottom: 38px;
+    }
+    p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #444240;
+        padding-bottom: 45px;
+    }
+    button{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        background-color: #D4B098;
+        color: #FFFFFF;
+        padding: 26px 38px 27px 38px;
+    }
+}
+.decoration{
+    .elips-big{
+        margin:  -70px 0px 0px 0px;
+        
+    }
+    .elips-small{
+        margin:  0px 0px -100px 0px;
+    }
+}
+.news{
+    max-width: 1171px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 81px;
+    padding-bottom: 90px;
+}
+.news__text{
+    h3{
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 43px;
+        color: #1B1A17;
+        padding-bottom: 40px;
+    }
+    p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        padding-bottom: 116px;
+
+    }
+}
+.news__image{
+    display: flex;
+    div{
+        margin: 0px 0px 0px 0px;
+    }
+    .item__1{
+        margin:  0px -55px 10px 0px;
+    }
+
+}
+.soc{
+    padding-right: 18px;
+}
+.footer__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #444240;
+    padding-bottom: 67px;
+    img{
+        margin: 7px 0px 28px 0px;
+    }
+    h2{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 79px 0 33px 0px;
+    }
+    p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(255, 255, 255, 0.75);
+        padding-bottom: 15px;
+    }
+}
